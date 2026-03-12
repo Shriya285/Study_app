@@ -1,0 +1,123 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #e6e6e6;
+  background: #131a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1b2540, #131a2a);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #2f3f67;
+  background: #121b30;
+  position: sticky;
+  top: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #a5b3d5;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  color: #f5f8ff;
+  font-weight: 600;
+}
+
+.page-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #1a2440;
+  border: 1px solid #314166;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.progress-track {
+  position: relative;
+  background: #0f172b;
+  border: 1px solid #40507a;
+  border-radius: 8px;
+  height: 28px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #60a5fa, #8b5cf6);
+}
+
+.progress-track span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+button,
+input,
+textarea {
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #41537f;
+  background: #0f172b;
+  color: #f0f4ff;
+}
+
+button {
+  cursor: pointer;
+  background: #2e5acb;
+  border: none;
+}
+
+button.secondary {
+  width: auto;
+  margin-bottom: 0.5rem;
+  background: #293860;
+}
+
+pre {
+  background: #0f172b;
+  border-radius: 8px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
