@@ -98,3 +98,19 @@ Open `http://localhost:5173`.
 - `POST /reflection`
 - `GET /dashboard`
 
+
+
+## Troubleshooting
+
+
+If backend start fails with `EADDRINUSE: address already in use :::5000`:
+
+- Either stop the process using that port:
+  - macOS/Linux: `lsof -i :5000` then `kill -9 <PID>`
+- Or start on a different preferred port:
+  - `PORT=5001 npm run start`
+
+The backend automatically retries with the next free port when the preferred port is occupied.
+By default it retries up to 15 additional ports (`PORT_RETRY_LIMIT=15`).
+You can increase this range if needed:
+- `PORT=5000 PORT_RETRY_LIMIT=30 npm run start`
